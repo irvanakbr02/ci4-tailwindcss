@@ -6,7 +6,9 @@ module.exports = {
     "./app/Views/**/**/*.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [],
 }
