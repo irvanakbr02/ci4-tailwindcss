@@ -1,20 +1,44 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/js/app.js":
+/*!***********************!*\
+  !*** ./src/js/app.js ***!
+  \***********************/
 /***/ (() => {
 
+//scroll navbar
+window.onscroll = function () {
+  var header = document.querySelector('header');
+  var fixNav = header.offsetTop;
 
+  if (window.pageYOffset > fixNav) {
+    header.classList.add('navbar-fixed');
+  } else {
+    header.classList.remove('navbar-fixed');
+  }
+}; //hamburger
+
+
+var hamburger = document.querySelector('#hamburger');
+var navMenu = document.querySelector('#nav-menu');
+hamburger.addEventListener('click', function () {
+  hamburger.classList.toggle('hamburger-active');
+  navMenu.classList.toggle('hidden');
+}); //Dark Mode
+
+var checkbox = document.querySelector('#toggle');
+var hmtl = document.querySelector('html');
+checkbox.addEventListener('click', function () {
+  checkbox.checked ? hmtl.classList.add('dark') : hmtl.classList.remove('dark');
+});
 
 /***/ }),
 
-/***/ "./src/app.css":
-/*!*********************!*\
-  !*** ./src/app.css ***!
-  \*********************/
+/***/ "./src/css/app.css":
+/*!*************************!*\
+  !*** ./src/css/app.css ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -161,8 +185,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
