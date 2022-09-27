@@ -7,17 +7,21 @@
   \***********************/
 /***/ (() => {
 
-//scroll navbar
 window.onscroll = function () {
   var header = document.querySelector('header');
-  var fixNav = header.offsetTop;
+  var fixedNav = header.offsetTop;
+  var toTop = document.querySelector('#to-top');
 
-  if (window.pageYOffset > fixNav) {
+  if (window.pageYOffset > fixedNav) {
     header.classList.add('navbar-fixed');
+    toTop.classList.remove('hidden');
+    toTop.classList.add('flex');
   } else {
     header.classList.remove('navbar-fixed');
+    toTop.classList.remove('flex');
+    toTop.classList.add('hidden');
   }
-}; //hamburger
+}; // Hamburger
 
 
 var hamburger = document.querySelector('#hamburger');
@@ -25,12 +29,27 @@ var navMenu = document.querySelector('#nav-menu');
 hamburger.addEventListener('click', function () {
   hamburger.classList.toggle('hamburger-active');
   navMenu.classList.toggle('hidden');
-}); //Dark Mode
+}); // Klik di luar hamburger
 
-var checkbox = document.querySelector('#toggle');
-var hmtl = document.querySelector('html');
-checkbox.addEventListener('click', function () {
-  checkbox.checked ? hmtl.classList.add('dark') : hmtl.classList.remove('dark');
+window.addEventListener('click', function (e) {
+  if (e.target != hamburger && e.target != navMenu) {
+    hamburger.classList.remove('hamburger-active');
+    navMenu.classList.add('hidden');
+  }
+}); //form submit spreeetsheet
+
+var scriptURL = 'https://script.google.com/macros/s/AKfycbz7XV9OEG9tia7sJwNMEHTwx8-ay1afnPne6oTs8RBJvStZ880E3TjnoqSR8JB7eDD2/exec';
+var form = document.forms['submit-to-google-sheet'];
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  fetch(scriptURL, {
+    method: 'POST',
+    body: new FormData(form)
+  }).then(function (response) {
+    return console.log('Success!', response);
+  })["catch"](function (error) {
+    return console.error('Error!', error.message);
+  });
 });
 
 /***/ }),

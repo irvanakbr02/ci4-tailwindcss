@@ -1,29 +1,25 @@
 <footer class="bg-slate-700 pt-24 pb-12">
     <div class="container">
         <div class="flex flex-wrap">
-            <div class="max-w-full px-4 mb-12 text-slate-200 font-medium md:w-1/2 lg:w-1/3">
+            <div class="sm:w-full px-4 mb-12 text-slate-200 font-medium md:w-1/2 lg:w-1/3">
                 <h2 class="font-bold text-3xl text-white mb-5">Bumdesa Tambaknegara</h2>
                 <h3 class="font-bold text-xl mb-2">Hubungi Kami</h3>
-                <p>irvanfebriansyah21@gmail.com</p>
-                <p>Tegal</p>
+                <p class="font-medium leading-relaxed text-slate-300 mb-1">
+                    tambaknegaraberkarya@gmail.com </p>
+                <p class="font-medium leading-relaxed text-slate-300 mb-10">
+                    +629619646104 </p>
             </div>
-            <div class="max-w-full px-4 mb-12 text-slate-200 font-medium md:w-1/2 lg:w-1/3">
-                <h2 class="font-bold text-3xl text-white mb-5">Kategori</h2>
-                <ul>
-                    <li><a href="#" class="inline-block hover:text-slate-700 mb-3">Programing</a></li>
-                    <li><a href="#" class="inline-block hover:text-slate-700 mb-3">UI UX</a></li>
-                    <li><a href="#" class="inline-block hover:text-slate-700 mb-3">Web Developer</a></li>
-                </ul>
+            <div class="sm:w-full px-4 mb-12 text-slate-200 font-medium md:w-1/2 lg:w-1/3">
+                <h2 class="font-bold text-3xl text-white mb-5">Lokasi</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31644.325302191664!2d109.17579731860569!3d-7.515849203052833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655d56c1244603%3A0x5027a76e3550020!2sTambaknegara%2C%20Rawalo%2C%20Banyumas%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1659954637821!5m2!1sen!2sid" width="400" height="250" class="mt-8 rounded-lg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="max-w-full px-4 mb-12 text-slate-200 font-medium lg:w-1/3">
+            <div class="sm:w-full px-4 mb-12 text-white font-medium lg:w-1/3">
                 <h2 class="font-bold text-2xl text-white mb-5">Tautan</h2>
                 <ul>
-                    <li><a href="#home" class="inline-block hover:text-slate-700 mb-3">Home</a></li>
-                    <li><a href="#about" class="inline-block hover:text-slate-700 mb-3">About</a></li>
-                    <li><a href="#portofolio" class="inline-block hover:text-slate-700 mb-3">Portofolio</a></li>
-                    <li><a href="#clients" class="inline-block hover:text-slate-700 mb-3">Our Clients</a></li>
-                    <li><a href="#blog" class="inline-block hover:text-slate-700 mb-3">Blog</a></li>
-                    <li><a href="#contact" class="inline-block hover:text-slate-700 mb-3">Contact Us</a></li>
+                    <li><a href="<?= base_url('/') ?>" class="inline-block hover:text-slate-300 mb-3">Home</a></li>
+                    <li><a href="#portofolio" class="inline-block hover:text-slate-300 mb-3">Artikel</a></li>
+                    <li><a href="#clients" class="inline-block hover:text-slate-300 mb-3">Laporan</a></li>
+                    <li><a href="<?= base_url('/kontak') ?>" class="inline-block hover:text-slate-300 mb-3">Kontak Kami</a></li>
                 </ul>
             </div>
         </div>
