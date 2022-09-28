@@ -1,4 +1,4 @@
-<header class="bg-slate-700 absolute top-0 left-0 w-full flex items-center z-10 font-Montserrat">
+<header class="bg-slate-700 absolute top-0 left-0 w-full flex items-center z-10 ">
     <div class="container">
         <div class="flex items-center justify-between relative">
             <div class="px-4 flex">
@@ -20,40 +20,54 @@
                             <a href="<?= base_url('/') ?>" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Home</a>
                         </li>
                         <!-- Coba Flowbite -->
-                        <li class="group">
-                            <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Profil <svg class="m-1 w-3 h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-between items-center font-semibold text-white py-2 mx-8 group-hover:text-slate-200 border-b   md:border-0  md:py-2 md:w-auto ">Profil <svg class="ml-1 w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
+                                </svg></button>
                             <!-- Dropdown menu -->
-                            <div id="dropdownNavbar" class="hidden z-10 w-44 bg-slate-700 rounded divide-y divide-slate-100 shadow dark:bg-white dark:divide-white" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 412px);" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom">
-                                <ul class="py-4 text-sm text-white hover:text-slate-700 dark:text-slate-400" aria-labelledby="dropdownNavbarButton">
-                                    <li>
-                                        <a href="#" class="font-semibold text-white py-2 mx-4 group-hover:text-slate-200 flex">Dashboard</a>
+                            <div id="dropdownNavbar" class="hidden z-10 w-44 font-normal bg-slate-600 rounded divide-y divide-slate-500 shadow dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+
+                                    <li aria-labelledby="dropdownNavbarLink">
+                                        <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex justify-between items-center text-white py-2 px-4 w-full">Periode 2017<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                            </svg></button>
+                                        <div id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                                                <li>
+                                                    <a href="<?= base_url('/profil/struktur') ?>" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Struktur Kepengurusan</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= base_url('/profil/pengurus') ?>" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Profil Pengurus</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= base_url('/profil/visi') ?>" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Visi dan Misi</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= base_url('/profil/unit') ?>" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Unit Usaha</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?= base_url('/profil/regulasi') ?>" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Regulasi</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <a href="#" class="font-semibold text-white py-2 mx-4 group-hover:text-slate-200 flex">Settings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="font-semibold text-white py-2 mx-4 group-hover:text-slate-200 flex">Earnings</a>
-                                    </li>
-                                </ul>
                             </div>
                         </li>
                         <li class="group">
                             <a href="<?= base_url('/kontak') ?>" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Kontak</a>
                         </li>
                         <li class="group">
-                            <a href="#clients" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Artikel</a>
+                            <a href="<?= base_url('/berita') ?>" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Berita</a>
                         </li>
                         <li class="group">
-                            <a href="#blog" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Laporan</a>
+                            <a href="<?= base_url('/laporan') ?>" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Laporan</a>
                         </li>
                         <li class="group">
-                            <a href="#contact" class="font-semibold text-white py-2 mx-8 mb-1 group-hover:text-slate-200 flex">Kategori</a>
+                            <a href="<?= base_url('/') ?>" class="font-semibold text-white py-2 mx-8 mb-1 group-hover:text-slate-200 flex">Kategori</a>
                         </li>
                         <li class="group">
-                            <a href="#contact" class="font-semibold bg-slate-300 text-slate-700 py-2 px-5 rounded-full mx-8 group-hover:text-slate-500 flex">Login</a>
+                            <a href="<?= base_url('/') ?>" class="font-semibold bg-slate-300 text-slate-700 py-2 px-5 rounded-full mx-8 group-hover:text-slate-500 flex">Login</a>
                         </li>
                     </ul>
                 </nav>

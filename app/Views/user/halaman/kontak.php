@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <section id="home" class="pt-36 pb-16 bg-slate-800">
     <div class="container">
-        <div class="">
+        <div class="mx-auto">
             <div class="flex flex-wrap">
                 <div class="sm:w-full self-center px-4 lg:w-1/2 mb-4">
                     <h1 class="text-base mb-2 md:text-xl lg:text-2xl font-semibold text-slate-300">Kontak Kami <span class="block font-bold text-slate-300 text-3xl">Bumdesa Tambaknegara Berkarya</span></h1>

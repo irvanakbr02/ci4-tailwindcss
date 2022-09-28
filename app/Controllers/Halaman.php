@@ -12,4 +12,12 @@ class Halaman extends BaseController
     {
         return view('user/halaman/kontak');
     }
+    public function artikel()
+    {
+        return view('user/halaman/artikel');
+    }
+    public function laporan()
+    {
+        return view('user/halaman/laporan');
+    }
 }
