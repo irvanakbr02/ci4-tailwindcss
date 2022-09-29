@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class LaporanModel extends Model
 {
     protected $table = 'laporan';
-    protected $useTimestamps = true;
+    // protected $useTimestamps = true;
     // protected $returnType = 'object';
     protected $allowedFields = ['judul', 'slug', 'nama_file'];
 

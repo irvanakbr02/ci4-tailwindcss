@@ -35,6 +35,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
 //halaman
 $routes->get('/', 'Halaman::index');
 $routes->get('/kontak', 'Halaman::kontak');
@@ -57,7 +58,22 @@ $routes->get('/kategori/kuliner/(:any)', 'Kategori::detailkuliner/$1');
 $routes->get('/kategori/kesenian/(:any)', 'Kategori::detailkesenian/$1');
 $routes->get('/kategori/budaya/(:any)', 'Kategori::detailbudaya/$1');
 // $routes->get('/kategori/coek', 'Kategori::coek');
-
+//admin
+$routes->get('/admin/dashboard', 'Admin::index');
+//Laporan Admin
+$routes->get('/admin/laporan', 'Admin::laporan');
+$routes->get('/admin/laporan/edit/(:segment)', 'Admin::LaporanEdit/$1');
+$routes->delete('/admin/laporan/(:num)', 'Admin::LaporanDelete/$1');
+$routes->get('/admin/laporan/create', 'Admin::LaporanCreate');
+$routes->post('/admin/laporan/save', 'Admin::LaporanSave');
+$routes->post('/admin/laporan/update/(:segment)', 'Admin::LaporanUpdate/$1');
+//Berita Admin
+$routes->get('/admin/berita', 'Admin::berita');
+$routes->get('/admin/berita/edit/(:segment)', 'Admin::BeritaEdit/$1');
+$routes->delete('/admin/berita/(:num)', 'Admin::BeritaDelete/$1');
+$routes->get('/admin/berita/create', 'Admin::BeritaCreate');
+$routes->post('/admin/berita/save', 'Admin::BeritaSave');
+$routes->post('/admin/berita/update/(:segment)', 'Admin::BeritaUpdate/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

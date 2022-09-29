@@ -27,12 +27,11 @@
                             <!-- Dropdown menu -->
                             <div id="dropdownNavbar" class="hidden z-10 w-44 font-normal bg-slate-600 rounded divide-y divide-slate-500 shadow dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-
                                     <li aria-labelledby="dropdownNavbarLink">
                                         <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex justify-between items-center text-white py-2 px-4 w-full">Periode 2017<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                             </svg></button>
-                                        <div id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                        <button type="button" id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded shadow dark:bg-gray-700">
                                             <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
                                                 <li>
                                                     <a href="<?= base_url('/profil/struktur') ?>" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Struktur Kepengurusan</a>
@@ -50,7 +49,7 @@
                                                     <a href="<?= base_url('/profil/regulasi') ?>" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Regulasi</a>
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </button>
                                     </li>
                             </div>
                         </li>

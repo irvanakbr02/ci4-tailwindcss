@@ -15,32 +15,30 @@
     <title><?= $title; ?></title>
 </head>
 
-<body>
+<body class="bg-slate-600 flex">
 
 
-    <!-- navigasi -->
-    <?= $this->include('layout/nav'); ?>
+    <?= $this->include('admin/layout/sidebar'); ?>
 
-    <!-- Isi -->
-    <?= $this->renderSection('content'); ?>
+    <div class="w-full flex flex-col h-screen overflow-y-hidden">
 
-    <!-- Footer -->
-    <?= $this->include('layout/footer'); ?>
-    <?= $this->include('layout/backtotop'); ?>
+        <?= $this->include('admin/layout/header'); ?>
 
+        <?= $this->renderSection('content'); ?>
 
-
+    </div>
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <!-- ChartJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 
     <!-- Flowbite -->
     <!-- <script src="/node_modules/flowbite/dist/flowbite.js"></script> -->
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
-    <!-- <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script> -->
-
-
     <!-- Javascript -->
     <script src="/js/app.js"></script>
 

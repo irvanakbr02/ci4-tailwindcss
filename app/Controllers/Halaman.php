@@ -9,7 +9,6 @@ class Halaman extends BaseController
     protected $berita;
     public function __construct()
     {
-
         $this->berita = new BeritaModel();
     }
     public function index()
@@ -40,6 +39,6 @@ class Halaman extends BaseController
         $data = [
             'title' => 'Laporan Bumdesa | Website Bumdesa'
         ];
-        return view('user/halaman/laporan');
+        return view('user/halaman/laporan', $data);
     }
 }
