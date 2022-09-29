@@ -2,22 +2,44 @@
 
 namespace App\Controllers;
 
+use App\Models\BeritaModel;
+
 class Halaman extends BaseController
 {
+    protected $berita;
+    public function __construct()
+    {
+
+        $this->berita = new BeritaModel();
+    }
     public function index()
     {
-        return view('user/halaman/home');
+        $data = [
+            'title' => ' Website Bumdesa',
+            'berita' => $this->berita->paginate(3, 'berita'),
+            'pager' => $this->berita->pager
+        ];
+        return view('user/halaman/home', $data);
     }
     public function kontak()
     {
-        return view('user/halaman/kontak');
+        $data = [
+            'title' => 'Kontak Kami | Website Bumdesa'
+        ];
+        return view('user/halaman/kontak', $data);
     }
     public function artikel()
     {
-        return view('user/halaman/artikel');
+        $data = [
+            'title' => 'Artikel Bumdesa | Website Bumdesa'
+        ];
+        return view('user/halaman/artikel', $data);
     }
     public function laporan()
     {
+        $data = [
+            'title' => 'Laporan Bumdesa | Website Bumdesa'
+        ];
         return view('user/halaman/laporan');
     }
 }

@@ -62,37 +62,21 @@
             </div>
         </div>
         <div class="flex flex-wrap">
-            <div class="sm:w-full px-4 md:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
-                    <img src="https://source.unsplash.com/360x200?hack" alt="berita" class="w-full">
-                    <div class="py-8 px-6">
-                        <h3 class="font-bold mb-4 hover:text-white truncate"><a href="#">Tips Belajar programing</a></h3>
-                        <p class="font-medium text-base text-slate-600 mb-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis pariatur quis aspernatur modi eligendi! Esse.</p>
-                        <a href="#" class="font-medium px-3 py-2 rounded-xl bg-slate-500 hover:bg-slate-700 text-white">Baca Selengkapnya..</a>
+            <?php foreach ($berita as $berita) : ?>
+                <div class="sm:w-full px-4 md:w-1/3 ">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+                        <img src="/img/<?= $berita['foto']; ?>" alt="berita" class="w-full ">
+                        <div class="py-8 px-6">
+                            <h3 class="font-bold mb-4 hover:text-white truncate"><a href="#"><?= $berita['judul']; ?></a></h3>
+                            <p class="font-medium text-base text-slate-600 mb-6">Ditulis oleh : <?= $berita['penulis']; ?></p>
+                            <p class="font-medium text-base text-slate-600 mb-6"><?php echo substr($berita['deskripsi'], 0, 150) . "..";  ?></p>
+                            <a href="/berita/<?= $berita['slug']; ?>" class="font-medium px-3 py-2 rounded-xl bg-slate-500 hover:bg-slate-700 text-white">Baca Selengkapnya..</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="sm:w-full px-4 md:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
-                    <img src="https://source.unsplash.com/360x200?linux" alt="berita" class="w-full">
-                    <div class="py-8 px-6">
-                        <h3 class="font-bold mb-4 hover:text-white truncate"><a href="#">Tips Belajar programing</a></h3>
-                        <p class="font-medium text-base text-slate-600 mb-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis pariatur quis aspernatur modi eligendi! Esse.</p>
-                        <a href="#" class="font-medium px-3 py-2 rounded-xl bg-slate-500 hover:bg-slate-700 text-white">Baca Selengkapnya..</a>
-                    </div>
-                </div>
-            </div>
-            <div class="sm:w-full px-4 md:w-1/2 xl:w-1/3">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
-                    <img src="https://source.unsplash.com/360x200?uiux" alt="berita" class="w-full">
-                    <div class="py-8 px-6">
-                        <h3 class="font-bold mb-4 hover:text-white truncate"><a href="#">Tips Belajar programing</a></h3>
-                        <p class="font-medium text-base text-slate-600 mb-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis pariatur quis aspernatur modi eligendi! Esse.</p>
-                        <a href="#" class="font-medium px-3 py-2 rounded-xl bg-slate-500 hover:bg-slate-700 text-white">Baca Selengkapnya..</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
+        <?= $pager->links('berita', 'pagination'); ?>
     </div>
 </section>
 <!-- Blog End Section -->

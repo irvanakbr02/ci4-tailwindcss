@@ -40,6 +40,7 @@ $routes->get('/', 'Halaman::index');
 $routes->get('/kontak', 'Halaman::kontak');
 //berita atau artikel
 $routes->get('/berita', 'Berita::berita');
+$routes->get('/berita/(:any)', 'Berita::detail/$1');
 //laporan
 $routes->get('/laporan', 'Laporan::index');
 $routes->get('/laporan/download/(:any)', 'Laporan::download/$1');
@@ -49,6 +50,13 @@ $routes->get('/profil/pengurus', 'Profil::pengurus');
 $routes->get('/profil/visi', 'Profil::visi');
 $routes->get('/profil/unit', 'Profil::unit');
 $routes->get('/profil/regulasi', 'Profil::regulasi');
+//kategori
+$routes->get('/kategori', 'Kategori::index');
+$routes->get('/kategori/wisata/(:any)', 'Kategori::detailwisata/$1');
+$routes->get('/kategori/kuliner/(:any)', 'Kategori::detailkuliner/$1');
+$routes->get('/kategori/kesenian/(:any)', 'Kategori::detailkesenian/$1');
+$routes->get('/kategori/budaya/(:any)', 'Kategori::detailbudaya/$1');
+// $routes->get('/kategori/coek', 'Kategori::coek');
 
 /*
  * --------------------------------------------------------------------

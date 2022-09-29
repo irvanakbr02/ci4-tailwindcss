@@ -2,10 +2,10 @@
     <div class="container">
         <div class="flex items-center justify-between relative">
             <div class="px-4 flex">
-                <div class="w-20 h-14 p-4  mx-auto ">
+                <a href="<?= base_url('/') ?>" class="w-20 h-14 p-4  mx-auto ">
                     <img src="/img/bumdes.jpg" alt="" class="w-full">
-                </div>
-                <a href="#home" class="font-bold text-lg text-white block py-6">Bumdesa Tambaknegara</a>
+                </a>
+                <a href="<?= base_url('/') ?>" class="font-bold text-lg text-white block py-6">Bumdesa Tambaknegara</a>
             </div>
             <div class="flex items-center px-4">
                 <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
@@ -64,7 +64,7 @@
                             <a href="<?= base_url('/laporan') ?>" class="font-semibold text-white py-2 mx-8 group-hover:text-slate-200 flex">Laporan</a>
                         </li>
                         <li class="group">
-                            <a href="<?= base_url('/') ?>" class="font-semibold text-white py-2 mx-8 mb-1 group-hover:text-slate-200 flex">Kategori</a>
+                            <a href="<?= base_url('/kategori') ?>" class="font-semibold text-white py-2 mx-8 mb-1 group-hover:text-slate-200 flex">Kategori</a>
                         </li>
                         <li class="group">
                             <a href="<?= base_url('/') ?>" class="font-semibold bg-slate-300 text-slate-700 py-2 px-5 rounded-full mx-8 group-hover:text-slate-500 flex">Login</a>

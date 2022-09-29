@@ -34,6 +34,6 @@ class Berita extends BaseController
             'berita' => $this->modelberita->getBerita($slug)
         ];
 
-        return view('/berita/detail', $data);
+        return view('/user/berita/detail', $data);
     }
 }
