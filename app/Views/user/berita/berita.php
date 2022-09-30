@@ -22,7 +22,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?= $pager->links('berita', 'pagination'); ?>
         </div>
+
     </div>
 </section>
 

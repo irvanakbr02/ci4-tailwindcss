@@ -8,6 +8,8 @@ class BudayaModel extends Model
 {
     protected $table = 'budaya';
     protected $useTimestamps = true;
+    protected $allowedFields = ['nama', 'slug', 'deskripsi', 'foto'];
+
 
     public function getBudaya($slug = false)
     {

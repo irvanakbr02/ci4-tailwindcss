@@ -1,4 +1,4 @@
-<aside class="relative bg-slate-700 h-screen w-64 hidden sm:block shadow-xl">
+<aside class="relative bg-slate-700  w-64 hidden sm:block shadow-xl">
     <div class="p-6">
         <button class="w-full bg-slate-200 text-slate-600 cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
             <a href="<?= base_url('/admin/dashboard') ?>">Dashboard </a>
@@ -19,20 +19,20 @@
         </button>
         <ul id="dropdown-example" class="hidden py-2 space-y-2">
             <li>
-                <a href="<?= base_url('/admin/dashboard') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Wisata</a>
+                <a href="<?= base_url('/admin/kategori/wisata') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Wisata</a>
             </li>
             <li>
-                <a href="<?= base_url('/admin/dashboard') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kuliner</a>
+                <a href="<?= base_url('/admin/kategori/kuliner') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kuliner</a>
             </li>
             <li>
-                <a href="<?= base_url('/admin/dashboard') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kesenian</a>
+                <a href="<?= base_url('/admin/kategori/kesenian') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kesenian</a>
             </li>
             <li>
-                <a href="<?= base_url('/admin/dashboard') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Budaya</a>
+                <a href="<?= base_url('/admin/kategori/budaya') ?>" class="flex items-center p-2 pl-11 w-full text-base text-slate-300 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Budaya</a>
             </li>
         </ul>
 
-        <a href="<?= base_url('/admin/dashboard') ?>" class="flex items-center text-slate-200 opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+        <a href="<?= base_url('/') ?>" class="flex items-center text-slate-200 opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
             Logout
         </a>
     </nav>

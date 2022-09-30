@@ -4,7 +4,7 @@
 
 <div class="w-full p-10 ">
     <div class="bg-white overflow-auto">
-        <h1 class="text-base mt-8 mb-3 mx-12 md:text-xl lg:text-2xl font-semibold text-slate-700"> <span class="block font-bold text-slate-700 text-3xl">Tambah Data Laporan</span></h1>
+        <h1 class="text-base mt-8 mb-3 mx-12 md:text-xl lg:text-2xl font-semibold text-slate-700"> <span class="block font-bold text-slate-700 text-3xl">Update Data Laporan</span></h1>
         <div class="leading-loose">
 
             <form action="/admin/laporan/update/<?= $laporan['id']; ?>" method="POST" enctype="multipart/form-data" class="p-10 bg-white rounded shadow-xl">

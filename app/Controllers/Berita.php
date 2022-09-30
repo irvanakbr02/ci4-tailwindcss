@@ -17,9 +17,9 @@ class Berita extends BaseController
     {
         $data = [
             'title' => 'Berita | Website Bumdes',
-            'berita' => $this->modelberita->getBerita()
-            // 'berita' => $this->modelberita->paginate(5, 'berita'),
-            // 'pager' => $this->modelberita->pager
+            // 'berita' => $this->modelberita->getBerita()
+            'berita' => $this->modelberita->paginate(2, 'berita'),
+            'pager' => $this->modelberita->pager
         ];
 
 

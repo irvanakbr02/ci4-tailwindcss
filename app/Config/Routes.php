@@ -62,18 +62,49 @@ $routes->get('/kategori/budaya/(:any)', 'Kategori::detailbudaya/$1');
 $routes->get('/admin/dashboard', 'Admin::index');
 //Laporan Admin
 $routes->get('/admin/laporan', 'Admin::laporan');
-$routes->get('/admin/laporan/edit/(:segment)', 'Admin::LaporanEdit/$1');
-$routes->delete('/admin/laporan/(:num)', 'Admin::LaporanDelete/$1');
-$routes->get('/admin/laporan/create', 'Admin::LaporanCreate');
-$routes->post('/admin/laporan/save', 'Admin::LaporanSave');
-$routes->post('/admin/laporan/update/(:segment)', 'Admin::LaporanUpdate/$1');
+$routes->get('/admin/laporan/edit/(:segment)', 'AdminLaporan::LaporanEdit/$1');
+$routes->delete('/admin/laporan/(:num)', 'AdminLaporan::LaporanDelete/$1');
+$routes->get('/admin/laporan/create', 'AdminLaporan::LaporanCreate');
+$routes->post('/admin/laporan/save', 'AdminLaporan::LaporanSave');
+$routes->post('/admin/laporan/update/(:segment)', 'AdminLaporan::LaporanUpdate/$1');
 //Berita Admin
 $routes->get('/admin/berita', 'Admin::berita');
-$routes->get('/admin/berita/edit/(:segment)', 'Admin::BeritaEdit/$1');
-$routes->delete('/admin/berita/(:num)', 'Admin::BeritaDelete/$1');
-$routes->get('/admin/berita/create', 'Admin::BeritaCreate');
-$routes->post('/admin/berita/save', 'Admin::BeritaSave');
-$routes->post('/admin/berita/update/(:segment)', 'Admin::BeritaUpdate/$1');
+$routes->get('/admin/berita/edit/(:segment)', 'AdminBerita::Edit/$1');
+$routes->delete('/admin/berita/(:num)', 'AdminBerita::Delete/$1');
+$routes->get('/admin/berita/create', 'AdminBerita::Create');
+$routes->post('/admin/berita/save', 'AdminBerita::Save');
+$routes->post('/admin/berita/update/(:segment)', 'AdminBerita::Update/$1');
+
+//Admin Kategori
+//wisata
+$routes->get('/admin/kategori/wisata', 'AdminKategori::wisata');
+$routes->get('/admin/kategori/wisata/edit/(:segment)', 'AdminKategori::WisataEdit/$1');
+$routes->delete('/admin/kategori/wisata/(:num)', 'AdminKategori::WisataDelete/$1');
+$routes->get('/admin/kategori/wisata/create', 'AdminKategori::WisataCreate');
+$routes->post('/admin/kategori/wisata/save', 'AdminKategori::WisataSave');
+$routes->post('/admin/kategori/wisata/update/(:segment)', 'AdminKategori::WisataUpdate/$1');
+
+//Kuliner
+$routes->get('/admin/kategori/kuliner', 'AdminKategori::kuliner');
+$routes->get('/admin/kategori/kuliner/edit/(:segment)', 'AdminKategori::KulinerEdit/$1');
+$routes->delete('/admin/kategori/kuliner/(:num)', 'AdminKategori::KulinerDelete/$1');
+$routes->get('/admin/kategori/kuliner/create', 'AdminKategori::KulinerCreate');
+$routes->post('/admin/kategori/kuliner/save', 'AdminKategori::KulinerSave');
+$routes->post('/admin/kategori/kuliner/update/(:segment)', 'AdminKategori::KulinerUpdate/$1');
+//Kesenian
+$routes->get('/admin/kategori/kesenian', 'AdminKategori::kesenian');
+$routes->get('/admin/kategori/kesenian/edit/(:segment)', 'AdminKategori::KesenianEdit/$1');
+$routes->delete('/admin/kategori/kesenian/(:num)', 'AdminKategori::KesenianDelete/$1');
+$routes->get('/admin/kategori/kesenian/create', 'AdminKategori::KesenianCreate');
+$routes->post('/admin/kategori/kesenian/save', 'AdminKategori::KesenianSave');
+$routes->post('/admin/kategori/kesenian/update/(:segment)', 'AdminKategori::KesenianUpdate/$1');
+//Budaya
+$routes->get('/admin/kategori/budaya', 'AdminKategori::budaya');
+$routes->get('/admin/kategori/budaya/edit/(:segment)', 'AdminKategori::BudayaEdit/$1');
+$routes->delete('/admin/kategori/budaya/(:num)', 'AdminKategori::BudayaDelete/$1');
+$routes->get('/admin/kategori/budaya/create', 'AdminKategori::BudayaCreate');
+$routes->post('/admin/kategori/budaya/save', 'AdminKategori::BudayaSave');
+$routes->post('/admin/kategori/budaya/update/(:segment)', 'AdminKategori::BudayaUpdate/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

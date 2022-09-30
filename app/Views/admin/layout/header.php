@@ -26,16 +26,16 @@
         <div id="dropdownBottom" class="hidden z-10 w-44 bg-slate-700">
             <ul class="py-1 text-sm text-slate-200" aria-labelledby="dropdownBottomButton">
                 <li>
-                    <a href="<?= base_url('/admin/dashboard') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Wisata</a>
+                    <a href="<?= base_url('/admin/kategori/wisata') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Wisata</a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/admin/dashboard') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Kuliner</a>
+                    <a href="<?= base_url('admin/kategori/kuliner') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Kuliner</a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/admin/dashboard') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Kesenian</a>
+                    <a href="<?= base_url('admin/kategori/kesenian') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Kesenian</a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/admin/dashboard') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Budaya</a>
+                    <a href="<?= base_url('admin/kategori/budaya') ?>" class="block py-2 px-4 hover:text-slate-100 hover:font-semibold ">Budaya</a>
                 </li>
             </ul>
         </div>

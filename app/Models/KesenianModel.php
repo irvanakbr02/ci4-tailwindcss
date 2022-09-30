@@ -8,6 +8,8 @@ class KesenianModel extends Model
 {
     protected $table = 'kesenian';
     protected $useTimestamps = true;
+    protected $allowedFields = ['nama', 'slug', 'deskripsi', 'foto'];
+
 
     public function getKesenian($slug = false)
     {

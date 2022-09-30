@@ -66,7 +66,7 @@
                             <a href="<?= base_url('/kategori') ?>" class="font-semibold text-white py-2 mx-8 mb-1 group-hover:text-slate-200 flex">Kategori</a>
                         </li>
                         <li class="group">
-                            <a href="<?= base_url('/') ?>" class="font-semibold bg-slate-300 text-slate-700 py-2 px-5 rounded-full mx-8 group-hover:text-slate-500 flex">Login</a>
+                            <a href="<?= base_url('/admin/dashboard') ?>" class="font-semibold bg-slate-300 text-slate-700 py-2 px-5 rounded-full mx-8 group-hover:text-slate-500 flex">Login</a>
                         </li>
                     </ul>
                 </nav>

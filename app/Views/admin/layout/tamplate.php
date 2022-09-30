@@ -20,7 +20,7 @@
 
     <?= $this->include('admin/layout/sidebar'); ?>
 
-    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+    <div class="w-full flex flex-col  overflow-y-hidden">
 
         <?= $this->include('admin/layout/header'); ?>
 

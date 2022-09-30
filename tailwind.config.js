@@ -6,6 +6,7 @@ module.exports = {
     "./app/Views/**/**/*.php",
     "./app/Views/**/**/**/*.php",
     "./app/Views/**/**/**/**/*.php",
+    "./app/Views/**/**/**/**/**/*.php",
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {

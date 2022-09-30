@@ -36,7 +36,7 @@
                     <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
 
                         <th scope="row" class="py-8 px-6 font-semibold text-gray-900 whitespace-nowrap dark:text-white">
-                            <img src="/img/<?= $berita['foto']; ?>" class="" alt="">
+                            <img src="/img/<?= $berita['foto']; ?>" class="w-30 h-24" alt="">
                         </th>
                         <th scope="row" class="py-8 px-6 font-semibold text-gray-900 whitespace-nowrap dark:text-white">
                             <?php echo substr($berita['judul'], 0, 30) . "..";  ?>
@@ -47,7 +47,7 @@
                         <th scope="row" class="py-8 px-6 font-semibold text-gray-900 whitespace-nowrap dark:text-white">
                             <?php echo substr($berita['deskripsi'], 0, 50) . "..";  ?>
                         </th>
-                        <td class="py-8 px-8 ">
+                        <td class="py-8 px-8 flex ">
                             <a href="<?= base_url('admin/berita/edit/' . $berita['slug']); ?>" class="font-medium hover:font-semibold bg-orange-300 hover:bg-orange-500 text-slate-700 py-2 px-5 rounded-full ">Edit</a>
 
                             <form action="/admin/berita/<?= $berita['id']; ?>" method="POST" class="inline">
@@ -63,6 +63,7 @@
             </tbody>
         </table>
     </div>
+    <?= $pager->links('berita', 'pagination'); ?>
     <div class="mt-8">
         <a href="/admin/berita/create" class="py-3 px-8  hover:bg-slate-200 duration-300 ease-in-out shadow-md bg-slate-300 text-slate-600 rounded-xl text-base font-semibold hover:font-bold hover:text-slate-700">Buat Artikel Baru </a>
     </div>

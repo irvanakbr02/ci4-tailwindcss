@@ -8,6 +8,8 @@ class WisataModel extends Model
 {
     protected $table = 'pariwisata';
     protected $useTimestamps = true;
+    protected $allowedFields = ['nama', 'slug', 'deskripsi', 'foto'];
+
 
     public function getWisata($slug = false)
     {

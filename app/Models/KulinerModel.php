@@ -8,6 +8,7 @@ class KulinerModel extends Model
 {
     protected $table = 'kuliner';
     protected $useTimestamps = true;
+    protected $allowedFields = ['nama', 'slug', 'deskripsi', 'foto'];
 
     public function getKuliner($slug = false)
     {
