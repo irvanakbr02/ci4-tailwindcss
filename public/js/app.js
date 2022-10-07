@@ -38,15 +38,24 @@ window.addEventListener('click', function (e) {
   }
 }); //form submit spreeetsheet
 
-var scriptURL = 'https://script.google.com/macros/s/AKfycbz7XV9OEG9tia7sJwNMEHTwx8-ay1afnPne6oTs8RBJvStZ880E3TjnoqSR8JB7eDD2/exec';
+var scriptURL = 'https://script.google.com/macros/s/AKfycbyObVLDM9ZDuEvxS44axTvKSDNJOF5-cmJSvo4Tgvj8rDrgdnMxG45h9lBeVrsa784/exec';
 var form = document.forms['submit-to-google-sheet'];
+var btnkirim = document.querySelector('.btn-kirim');
+var btnload = document.querySelector('.btn-load');
+var alertkirim = document.querySelector('.alert-kirim');
 form.addEventListener('submit', function (e) {
   e.preventDefault();
+  btnload.classList.toggle('hidden');
+  btnkirim.classList.toggle('hidden');
   fetch(scriptURL, {
     method: 'POST',
     body: new FormData(form)
   }).then(function (response) {
-    return console.log('Success!', response);
+    btnload.classList.toggle('hidden');
+    btnkirim.classList.toggle('hidden');
+    alertkirim.classList.toggle('hidden');
+    form.reset();
+    console.log('Success!', response);
   })["catch"](function (error) {
     return console.error('Error!', error.message);
   });

@@ -25,7 +25,14 @@ class Halaman extends BaseController
         $data = [
             'title' => 'Kontak Kami | Website Bumdesa'
         ];
+
         return view('user/halaman/kontak', $data);
+    }
+    public function kontaksave()
+    {
+        session()->setFlashdata('pesan', 'Pesan berhasil terkirim');
+
+        return redirect()->to('/kontak');
     }
     public function artikel()
     {

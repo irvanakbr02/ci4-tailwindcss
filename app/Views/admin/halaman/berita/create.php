@@ -4,7 +4,7 @@
 
 <div class="w-full p-10 ">
     <div class="bg-white overflow-auto">
-        <h1 class="text-base mt-8 mb-3 mx-12 md:text-xl lg:text-2xl font-semibold text-slate-700"> <span class="block font-bold text-slate-700 text-3xl">Tambah Data Laporan</span></h1>
+        <h1 class="text-base mt-8 mb-3 mx-12 md:text-xl lg:text-2xl font-semibold text-slate-700"> <span class="block font-bold text-slate-700 text-3xl">Tambah Artikel</span></h1>
         <div class="leading-loose">
 
             <form action="/admin/berita/save" method="POST" enctype="multipart/form-data" class="p-10 bg-white rounded shadow-xl">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="mb-2">
                     <label class="block text-sm text-gray-600 mb-3  " for="deskripsi">Isi</label>
-                    <textarea class="<?= ($validation->hasError('deskripsi')) ? 'is-invalid' : '' ?> w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="deskripsi" name="deskripsi" type="text" required="" aria-label="Name">
+                    <textarea rows="8" class="<?= ($validation->hasError('deskripsi')) ? 'is-invalid' : '' ?> w-full px-5 py-1 text-gray-700 bg-gray-200 rounded summernote" id="deskripsi" name="deskripsi" type="text" required="" aria-label="Name">
                     </textarea>
                 </div>
                 <div class="mt-2">
@@ -33,5 +33,7 @@
             </form>
         </div>
     </div>
+
+
 
     <?= $this->endsection(); ?>

@@ -11,7 +11,7 @@
                     <h1 class="text-base mb-2 md:text-xl lg:text-2xl font-semibold text-slate-300">Selamat datang di website <span class="block font-bold text-slate-300 text-3xl">Bumdesa Tambaknegara Berkarya</span></h1>
                     <p class="font-medium leading-relaxed text-slate-300 mb-10">
                         Badan Usaha Milik Desa Tambaknegara adalah Lembaga Usaha Desa yang dikelola oleh Masyarakat dan Pemerintah Desa Tambaknegara dalam upaya memperkuat perekonomi desa dan di bentuk berdasarkan kebutuhan dan potensi desa. </p>
-                    <a href="#" class="py-3 px-8 bg-slate-700 duration-300 ease-in-out shadow-md hover:bg-slate-300 hover:text-slate-600 rounded-xl text-base font-semibold text-slate-300">Yuk Bergabung! </a>
+                    <a href="<?= base_url('/kontak'); ?>" class="py-3 px-8 bg-slate-700 duration-300 ease-in-out shadow-md hover:bg-slate-300 hover:text-slate-600 rounded-xl text-base font-semibold text-slate-300">Yuk Bergabung! </a>
                 </div>
                 <div class="sm:w-full self-center justify-center px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-9 lg:right-0">

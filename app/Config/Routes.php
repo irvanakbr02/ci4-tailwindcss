@@ -39,6 +39,7 @@ $routes->set404Override();
 //halaman
 $routes->get('/', 'Halaman::index');
 $routes->get('/kontak', 'Halaman::kontak');
+// $routes->post('/kontak/form', 'Halaman::kontaksave');
 //berita atau artikel
 $routes->get('/berita', 'Berita::berita');
 $routes->get('/berita/(:any)', 'Berita::detail/$1');
@@ -60,6 +61,7 @@ $routes->get('/kategori/budaya/(:any)', 'Kategori::detailbudaya/$1');
 // $routes->get('/kategori/coek', 'Kategori::coek');
 //admin
 $routes->get('/admin/dashboard', 'Admin::index');
+// $routes->get('/login', 'Admin::login');
 //Laporan Admin
 $routes->get('/admin/laporan', 'Admin::laporan');
 $routes->get('/admin/laporan/edit/(:segment)', 'AdminLaporan::LaporanEdit/$1');

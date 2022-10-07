@@ -5,7 +5,8 @@
     <h1 class="text-base mt-8 mb-3  md:text-xl lg:text-2xl font-semibold text-slate-700"> <span class="block font-bold text-slate-100 text-3xl">Artikel Bumdesa</span></h1>
     <?php if (session()->getFlashdata('pesan')) : ?>
         <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
-            <span class="font-medium"> <?= session()->getFlashdata('pesan') ?>
+            <span class="font-medium">
+                <?= session()->getFlashdata('pesan') ?>
             </span>
         </div>
     <?php endif ?>

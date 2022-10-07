@@ -32,12 +32,23 @@ window.onscroll = function () {
   });
   
   //form submit spreeetsheet
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbz7XV9OEG9tia7sJwNMEHTwx8-ay1afnPne6oTs8RBJvStZ880E3TjnoqSR8JB7eDD2/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyObVLDM9ZDuEvxS44axTvKSDNJOF5-cmJSvo4Tgvj8rDrgdnMxG45h9lBeVrsa784/exec'
   const form = document.forms['submit-to-google-sheet']
+  const btnkirim = document.querySelector('.btn-kirim')
+  const btnload = document.querySelector('.btn-load')
+  const alertkirim = document.querySelector('.alert-kirim')
 
   form.addEventListener('submit', e => {
     e.preventDefault()
+    btnload.classList.toggle('hidden')
+    btnkirim.classList.toggle('hidden')
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => {
+        btnload.classList.toggle('hidden')
+        btnkirim.classList.toggle('hidden')
+        alertkirim.classList.toggle('hidden')
+        form.reset();
+        console.log('Success!', response)
+      })
       .catch(error => console.error('Error!', error.message))
   })

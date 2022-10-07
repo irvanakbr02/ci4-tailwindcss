@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/css/app.css">
     <!-- Flowbite CSS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <!-- Summernote -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <title><?= $title; ?></title>
 </head>
 
@@ -40,6 +42,8 @@
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <!-- <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script> -->
 
+    <!-- Summernote -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <!-- Javascript -->
     <script src="/js/app.js"></script>

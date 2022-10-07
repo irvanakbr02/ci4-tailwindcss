@@ -32,7 +32,7 @@
             </li>
         </ul>
 
-        <a href="<?= base_url('/') ?>" class="flex items-center text-slate-200 opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+        <a href="<?= base_url('/logout') ?>" class="flex items-center text-slate-200 opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
             Logout
         </a>
     </nav>

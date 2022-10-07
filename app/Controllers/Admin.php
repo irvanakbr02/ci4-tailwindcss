@@ -24,6 +24,13 @@ class Admin extends BaseController
         ];
         return view('admin/halaman/dashboard', $data);
     }
+    public function login()
+    {
+        $data = [
+            'title' => ' Login Website Bumdesa',
+        ];
+        return view('auth/login', $data);
+    }
     public function laporan()
     {
         $data = [
